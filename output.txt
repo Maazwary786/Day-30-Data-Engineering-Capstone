@@ -1,0 +1,48 @@
+[info] welcome to sbt 1.9.7 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/mouaz/scala-spark-30days/day30-data-engineering-capstone/project
+[info] loading settings for project day30-data-engineering-capstone from build.sbt ...
+[info] set current project to day30-data-engineering-capstone (in build file:/home/mouaz/scala-spark-30days/day30-data-engineering-capstone/)
+[info] compiling 1 Scala source to /home/mouaz/scala-spark-30days/day30-data-engineering-capstone/target/scala-2.12/classes ...
+[info] done compiling
+[info] running Day30App 
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/07 05:04:05 WARN Utils: Your hostname, Mohd-Mouaz-Ahmed resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/10/07 05:04:05 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/07 05:04:05 INFO SparkContext: Running Spark version 3.5.1
+26/10/07 05:04:05 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+26/10/07 05:04:05 INFO SparkContext: Java version 17.0.20.1
+26/10/07 05:04:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/07 05:04:06 INFO ResourceUtils: ==============================================================
+26/10/07 05:04:06 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/07 05:04:06 INFO ResourceUtils: ==============================================================
+26/10/07 05:04:06 INFO SparkContext: Submitted application: Final Data Engineering Capstone
+26/10/07 05:04:06 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/07 05:04:06 INFO ResourceProfile: Limiting resource is cpu
+26/10/07 05:04:06 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/07 05:04:06 INFO SecurityManager: Changing view acls to: mouaz
+26/10/07 05:04:06 INFO SecurityManager: Changing modify acls to: mouaz
+26/10/07 05:04:06 INFO SecurityManager: Changing view acls groups to: 
+26/10/07 05:04:06 INFO SecurityManager: Changing modify acls groups to: 
+26/10/07 05:04:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: mouaz; groups with view permissions: EMPTY; users with modify permissions: mouaz; groups with modify permissions: EMPTY
+26/10/07 05:04:06 INFO Utils: Successfully started service 'sparkDriver' on port 43295.
+26/10/07 05:04:06 INFO SparkEnv: Registering MapOutputTracker
+26/10/07 05:04:06 INFO SparkEnv: Registering BlockManagerMaster
+26/10/07 05:04:06 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/07 05:04:06 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+Exception in thread "sbt-bg-threads-1" java.lang.IllegalAccessError: Error running public static void Day30App.main(java.lang.String[]).
+java.lang.IllegalAccessError: class org.apache.spark.storage.StorageUtils$ (in unnamed module @0x47c16592) cannot access class sun.nio.ch.DirectBuffer (in module java.base) because module java.base does not export sun.nio.ch to unnamed module @0x47c16592
+If using a layered classloader, this can occur if jvm package private classes are accessed across layers. This can be fixed by changing to the Flat or ScalaInstance class loader layering strategies.
+	at sbt.Run.invokeMain(Run.scala:153)
+	at sbt.Run.execute$1(Run.scala:94)
+	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:121)
+	at sbt.Run$.executeSuccess(Run.scala:187)
+	at sbt.Run.runWithLoader(Run.scala:121)
+	at sbt.Defaults$.$anonfun$bgRunTask$6(Defaults.scala:1988)
+	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:1927)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:367)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[success] Total time: 16 s, completed Oct 7, 2026, 5:04:06 AM
